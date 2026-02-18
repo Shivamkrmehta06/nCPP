@@ -23,7 +23,7 @@ void prevSmaller(vector<int> &arr){
     s.push(-1);
     for(int i = 0;i<arr.size();i++){
         int curr = arr[i];
-        while(s.top()>=curr){
+        while(s.top()!=-1&&s.top()>=curr){
             s.pop();
         }
         ans[i] = s.top();
