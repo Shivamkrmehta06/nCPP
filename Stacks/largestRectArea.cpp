@@ -1,8 +1,6 @@
 #include <iostream>
 #include <vector>
 #include <stack>
-#include <climits>
-#include <algorithm>
 using namespace std;
 
 vector<int> nextSmaller(vector<int> &arr,int size){
