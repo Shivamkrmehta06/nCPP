@@ -10,8 +10,12 @@ void substring(string s){
     }
 }
 
+void subStringVowel(string s){
+
+}
+
 int main() {
-    string s = "abc";
+    string s = "abcde";
     substring(s);
     return 0;
 }
