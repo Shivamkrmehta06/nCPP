@@ -1,21 +1,26 @@
 #include <iostream>
 using namespace std;
 
-void mergeAlternately(string word1, string word2) {
-        string ans;
-        int len1 = word1.length();
-        int len2 = word2.length();
-        int start1 = 0;
-        int start2 = 0;
-        int mai = 0;
-        while(start1<len1 && start2<len2){
-            ans[mai++] = word1[start1++];
-            ans[mai++] = word2[start2++];
-        }
-        cout<<ans<<endl;
+ string mergeAlternately(string word1, string word2) {
+       string ans;
+       int i = 0;
+       int j = 0;
+       while(i<word1.size()&&j<word2.size()){
+        ans.push_back(word1[i]);
+        ans.push_back(word2[j]);
+        i++;
+        j++;
+       }
+       while(i<word1.size()){
+        ans.push_back(word1[i]);
+        i++;
+       }
+       while(j<word2.size()){
+        ans.push_back(word2[j]);
+        j++;
+       }
+       return ans;
     }
-
-
 int main() {
     string a = "abc";
     string b = "pqr";
