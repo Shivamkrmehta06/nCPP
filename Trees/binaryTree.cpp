@@ -1,61 +1,85 @@
 #include <iostream>
+#include <queue>
 using namespace std;
 
-class node{
+class TreeNode{
     public:
-    int data;
-    node* left;
-    node* right;
-    node(int d){
-        this->data = d;
+        int data;
+        TreeNode* left;
+        TreeNode* right;
+    TreeNode(int val){
+        this->data = val;
         this->left = NULL;
         this->right = NULL;
     }
 };
 
-node* buildTree(node* root){
-    cout<<"Enter the data: "<<endl;
+TreeNode* buildTree(TreeNode* root){
+    cout<<"Enter the root Node: "<<endl;
     int data;
     cin>>data;
-    root = new node(data);
+    root = new TreeNode(data);
     if(data == -1){
         return NULL;
     }
-    cout<<"Enter data for inserting in left of "<<data<<endl;
+    cout<<"Enter the data to be inserted in left of "<<data<<endl;
     root->left = buildTree(root->left);
-    cout<<"Enter data for inserting in right of "<<data<<endl;
+    cout<<"Enter the data to be inserted in right of "<<data<<endl;
     root->right = buildTree(root->right);
     return root;
 }
 
-void levelOrderTraversal(node* root){
-    queue<node*> q;
+void levelOrder(TreeNode* root){
+    queue<TreeNode*> q;
+    q.push(root);
+    while(!q.empty()){
+         TreeNode* temp = q.front();
+         cout<<temp->data<<" ";
+         q.pop();
+         if(temp->left){
+            q.push(temp->left);
+         }
+         if(temp->right){
+            q.push(temp->right);    
+         }
+    }
+}
+
+void levelOrderImpv(TreeNode* root){
+    queue<TreeNode*> q;
     q.push(root);
     q.push(NULL);
     while(!q.empty()){
-        node* temp = q.front();
+        TreeNode* temp = q.front();
         q.pop();
-        if(temp==NULL){
+        if(temp == NULL){
             cout<<endl;
             if(!q.empty()){
                 q.push(NULL);
             }
-        }
-        else{
+        }else{
             cout<<temp->data<<" ";
             if(temp->left){
                 q.push(temp->left);
-            }
-            if(temp->right){
+            }if(temp->right){
                 q.push(temp->right);
             }
         }
     }
 }
 
+void postOrder(TreeNode* root){
+    if(root==NULL) return;
+    postOrder(root->left);
+    postOrder(root->right);
+    cout<<root->data<<" ";
+}
+
+#ifdef RUN_BINARY_TREE_DEMO
 int main() {
-    node* root = NULL;
-    root = buildTree(root);
-    levelOrderTraversal(root);
+    TreeNode* n1 = NULL;
+    n1 = buildTree(n1);
+    levelOrderImpv(n1);
     return 0;
 }
+#endif

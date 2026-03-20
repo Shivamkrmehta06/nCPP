@@ -1,4 +1,4 @@
-#include<stdio.h>
+/* #include<stdio.h>
 #include<unistd.h> //used for system-level functions
 #include<stdlib.h>
 #include<pthread.h>// used to manage and create thread
@@ -18,5 +18,30 @@ int main(){
         pthread_create(&tid,NULL,myThreadFun,(void*)&tid);
     }
     pthread_exit(NULL);
+    return 0;
+} */
+
+#include <iostream>
+using namespace std;
+
+//Match String problem
+
+int matchString(string a, string b){
+    int as = a.length();
+    int bs = b.length();
+    for(int i = 0;i<as-bs;i++){
+        int j = 0;
+        while(j<bs && a[i+j]==b[j]){
+            j++;
+        }
+        if(j==bs) return i;
+    }
+    return -1;
+}
+
+
+
+int main() {
+    
     return 0;
 }
