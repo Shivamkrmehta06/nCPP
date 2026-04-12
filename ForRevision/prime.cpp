@@ -15,6 +15,10 @@ int countPrime(int n){
 }
 
 int main() {
-    int ans = countPrime(15);
+    //int ans = countPrime(15);
+    string a = "Shivam";
+    string b = "Kunal";
+    string c = a+b;
+    cout<<c<<endl;
     return 0;
 }

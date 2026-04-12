@@ -14,7 +14,7 @@ class TreeNode{
     }
 };
 
-TreeNode* buildTree(TreeNode* root){
+TreeNode* buildTree(TreeNode* root){    
     cout<<"Enter the root Node: "<<endl;
     int data;
     cin>>data;

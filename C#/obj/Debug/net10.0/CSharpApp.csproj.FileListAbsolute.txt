@@ -1,0 +1,15 @@
+/Users/shivamkrmehta/NC++/C#/bin/Debug/net10.0/CSharpApp
+/Users/shivamkrmehta/NC++/C#/bin/Debug/net10.0/CSharpApp.deps.json
+/Users/shivamkrmehta/NC++/C#/bin/Debug/net10.0/CSharpApp.runtimeconfig.json
+/Users/shivamkrmehta/NC++/C#/bin/Debug/net10.0/CSharpApp.dll
+/Users/shivamkrmehta/NC++/C#/bin/Debug/net10.0/CSharpApp.pdb
+/Users/shivamkrmehta/NC++/C#/obj/Debug/net10.0/CSharpApp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/shivamkrmehta/NC++/C#/obj/Debug/net10.0/CSharpApp.AssemblyInfoInputs.cache
+/Users/shivamkrmehta/NC++/C#/obj/Debug/net10.0/CSharpApp.AssemblyInfo.cs
+/Users/shivamkrmehta/NC++/C#/obj/Debug/net10.0/CSharpApp.csproj.CoreCompileInputs.cache
+/Users/shivamkrmehta/NC++/C#/obj/Debug/net10.0/CSharpApp.sourcelink.json
+/Users/shivamkrmehta/NC++/C#/obj/Debug/net10.0/CSharpApp.dll
+/Users/shivamkrmehta/NC++/C#/obj/Debug/net10.0/refint/CSharpApp.dll
+/Users/shivamkrmehta/NC++/C#/obj/Debug/net10.0/CSharpApp.pdb
+/Users/shivamkrmehta/NC++/C#/obj/Debug/net10.0/CSharpApp.genruntimeconfig.cache
+/Users/shivamkrmehta/NC++/C#/obj/Debug/net10.0/ref/CSharpApp.dll
