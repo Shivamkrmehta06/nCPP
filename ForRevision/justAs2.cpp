@@ -59,14 +59,33 @@ void reverseStr(const string &y){
     for(auto x:b) cout<<x<<" ";
 }
 
+char toLower(char a){
+    if(a>='A'&&a<='Z'){
+        a = a-'A'+'a';
+        return a;
+    }
+    return a;
+}
+
+bool isVowel(char ch){
+    char a = toLower(ch);
+    if(a=='a'||a=='i'||a=='e'||a=='o'||a=='u'){
+        return true;
+    }return false;
+}
+
 int main() {
-    vector<int> arr = {4,3,2,7,8,2,3,1};
-    //findDisappearedNumbers(arr);
+    // vector<int> arr = {4,3,2,7,8,2,3,1};
+    // //findDisappearedNumbers(arr);
     //missingNum(arr);
     //cout<<(3/2)<<endl;
     
-    string pangram = "The quick brown fox jumps over the lazy dog";
-    reverseStr(pangram);
-
+    // string pangram = "The quick brown fox jumps over the lazy dog";
+    // reverseStr(pangram);
+    
+    char a = toLower('U');
+    cout<<a<<endl;
+    bool is = isVowel(a);
+    is==true?cout<<"Vowel"<<endl:cout<<"Not Vowel"<<endl;
     return 0;
 }
