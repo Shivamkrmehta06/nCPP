@@ -41,7 +41,7 @@ vector<int> boundaryTrav(TreeNode* root){
     //right subtree
     traverseLeaf(root->right,ans);
     //traverse right part
-    traverseRight(root->right,ans);\
+    traverseRight(root->right,ans);
     return ans;
 }
 
