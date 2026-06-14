@@ -11,21 +11,13 @@ Find out the minimum possible difference between the height of the shortest and 
 int mindif(vector<int> arr,int k){
     sort(arr.begin(),arr.end());
     int n=arr.size();
-    for(int i = 0;i<n;i++){
-        if(i<n/2-1){
-            arr[i]=arr[i]+k;
-        }else{
-            arr[i]=arr[i]-k;
-        }
+    int small=0,big=0,ans=arr[n-1]-arr[0];
+    for(int i=0;i<=n-1;i++){
+        small=min(arr[0]+k,arr[i+1]-k);
+        big=max(arr[i]+k,arr[n-1]-k);
+        ans=min(ans,big-small);
     }
-    for(auto x:arr) cout<<x<<" ";
-    int maxi = *max_element(arr.begin(),arr.end());
-    int mini = *min_element(arr.begin(),arr.end());
-    int diff = maxi-mini;
-    cout<<endl;
-    cout<<"Max: "<<maxi<<endl<<"Min: "<<mini<<endl;
-    cout<<diff<<endl;
-    return maxi-mini;
+    return ans;
 }
 
 int main() {
