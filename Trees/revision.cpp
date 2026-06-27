@@ -226,3 +226,11 @@ pair<bool,int> isSumTree(TreeNode* root){
 
 //     return 0;
 // }
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout<<35*40<<endl;
+    return 0;
+}
