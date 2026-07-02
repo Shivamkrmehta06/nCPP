@@ -114,16 +114,28 @@ vector<int> zigZag(TreeNode* root){
     return result;
 }
 
+void noN(TreeNode* root,int &i){
+    if(root==NULL) return;
+    noN(root->left,i);
+    i++;
+    noN(root->right,i);
+}
+
 int main() {
     TreeNode* n1 = buildTree(n1);
     levelOrder(n1);
-    int he = height(n1);
-    cout<<"Height of the Tree is: "<<he<<endl;
-    pair<int,int> a = diameter(n1);
-    cout<<"Diameter: "<<a.first<<endl<<"Height: "<<a.second<<endl;
-    bool isB = isBalanced(n1);
-    isB==true?cout<<"Balanced Tree"<<endl:cout<<"Unbalanced Tree"<<endl;
-    vector<int> st = zigZag(n1);
-    for(auto x:st) cout<<x<<" ";
+    // int he = height(n1);
+    // cout<<"Height of the Tree is: "<<he<<endl;
+    // pair<int,int> a = diameter(n1);
+    // cout<<"Diameter: "<<a.first<<endl<<"Height: "<<a.second<<endl;
+    // bool isB = isBalanced(n1);
+    // isB==true?cout<<"Balanced Tree"<<endl:cout<<"Unbalanced Tree"<<endl;
+    // vector<int> st = zigZag(n1);
+    // for(auto x:st) cout<<x<<" ";
+
+    int i = 0;
+    noN(n1,i);
+    cout<<"Number of Nodes: "<<i<<endl;
+
     return 0;
 }
