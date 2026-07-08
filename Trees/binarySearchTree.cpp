@@ -141,16 +141,16 @@ TreeNode* deleteNode(TreeNode* root,int target){
 }
 
 
-int main() {
-    TreeNode* n1= takeInput();
-    //lOT(n1);
-    // int x = 40;
-    // TreeNode* ans = searchInBST(n1,x);
-    // ans!=NULL?cout<<ans->data<<" element found"<<endl:cout<<"Element Not Found"<<endl;
-    inorder(n1);
-    //TreeNode* ans = inPred(n1,35);
-    TreeNode* ans = inSuccessor(n1,29);
-    cout<<endl<<"Predecessor: "<<ans->data<<endl;
-    return 0;
-}
+// int main() {
+//     TreeNode* n1= takeInput();
+//     //lOT(n1);
+//     // int x = 40;
+//     // TreeNode* ans = searchInBST(n1,x);
+//     // ans!=NULL?cout<<ans->data<<" element found"<<endl:cout<<"Element Not Found"<<endl;
+//     inorder(n1);
+//     //TreeNode* ans = inPred(n1,35);
+//     TreeNode* ans = inSuccessor(n1,29);
+//     cout<<endl<<"Predecessor: "<<ans->data<<endl;
+//     return 0;
+// }
     
